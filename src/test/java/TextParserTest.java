@@ -1,5 +1,6 @@
 import com.epam.Text.TextElements.Sentence;
 import com.epam.Text.TextElements.SentenceType;
+import com.epam.Text.TextElements.Text;
 import com.epam.Text.TextElements.Word;
 import com.epam.Text.TextParser;
 import org.junit.Test;
@@ -10,7 +11,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class TextParserTest {
-    private final static String TEXT = "This morning I get up at a half past six o’clock. It’s still dark. I feel tired.";
+    private final static String TEXT = "This morning I get up at a half past six o’clock. It’s still dark. I feel tired. ";
 
     @Test
     public void parseIntoWords() {
@@ -32,5 +33,13 @@ public class TextParserTest {
         for(Sentence s : sentences){
             assertEquals(SentenceType.DECLARATIVE, TextParser.getSentenceType(s));
         }
+    }
+
+    @Test
+    public void textToString(){
+        Text text = TextParser.parse(TEXT);
+        String actualValue = text.toString();
+        String expectedValue = TEXT;
+        assertEquals(actualValue, expectedValue);
     }
 }

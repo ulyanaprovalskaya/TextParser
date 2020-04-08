@@ -26,9 +26,17 @@ public class Text {
     public boolean equals(Object obj){
         if(obj instanceof Text){
             Text text = (Text)obj;
-            //if(!(text.getSentences().size() == this.getSentences().size())) return false;
             if(text.getSentences().equals(text.getSentences())) return true;
         }
         return false;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder result = new StringBuilder("");
+        for(Sentence s : sentences){
+            result.append(s);
+        }
+        return result.toString();
     }
 }

@@ -56,4 +56,14 @@ public class Sentence {
         }
         return false;
     }
+
+    @Override
+    public String toString(){
+        StringBuilder result = new StringBuilder("");
+        for(Word w  : sentence){
+            result.append(w + " ");
+        }
+        return result.toString();
+    }
+
 }

@@ -28,4 +28,10 @@ public class Word {
         }
         return false;
     }
+
+    @Override
+    public String toString(){
+        if(punctuation == null) return word;
+        return word + punctuation;
+    }
 }
