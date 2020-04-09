@@ -1,8 +1,8 @@
-import com.Text.TextElements.Sentence;
-import com.Text.TextElements.SentenceType;
-import com.Text.TextElements.Text;
-import com.Text.TextElements.Word;
-import com.Text.TextParser;
+import com.text.textElements.Sentence;
+import com.text.textElements.SentenceType;
+import com.text.textElements.Text;
+import com.text.textElements.Word;
+import com.text.textParser.TextParser;
 import org.junit.Test;
 
 import java.util.List;

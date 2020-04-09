@@ -1,19 +1,19 @@
-package com.Text.TextElements;
+package com.text.textElements;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Sentence {
-    private List<Word> sentence;
+    private List<Word> words;
     private SentenceType sentenceType;
 
 
-    public List<Word> getSentence() {
-        return sentence;
+    public List<Word> getWords() {
+        return words;
     }
 
-    public void setSentence(List<Word> sentence) {
-        this.sentence = sentence;
+    public void setWords(List<Word> words) {
+        this.words = words;
     }
 
     public SentenceType getSentenceType() {
@@ -24,35 +24,31 @@ public class Sentence {
         this.sentenceType = sentenceType;
     }
 
-    public Sentence(List<Word> sentence){
-        this.sentence = sentence;
+    public Sentence(List<Word> words){
+        this.words = words;
     }
 
     public Sentence(){
-        this.sentence = new ArrayList<Word>();
+        this.words = new ArrayList<>();
     }
 
     public void add(Word word){
-        sentence.add(word);
+        words.add(word);
     }
 
     public Word getLastWord(){
-        Word w = new Word();
-        for(Word word : sentence){
-            w = word;
-        }
-        return w;
+        return  words.get(words.size() - 1);
     }
 
     public int getLength(){
-        return sentence.size();
+        return words.size();
     }
 
     @Override
     public boolean equals(Object obj){
         if(obj instanceof Sentence){
             Sentence s = (Sentence)obj;
-            return this.sentence.equals(s.sentence) && this.sentenceType.equals(s.sentenceType);
+            return this.words.equals(s.words) && this.sentenceType.equals(s.sentenceType);
         }
         return false;
     }
@@ -60,7 +56,7 @@ public class Sentence {
     @Override
     public String toString(){
         StringBuilder result = new StringBuilder("");
-        for(Word w  : sentence){
+        for(Word w  : words){
             result.append(w + " ");
         }
         return result.toString();

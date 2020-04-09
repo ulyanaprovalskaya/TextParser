@@ -1,8 +1,7 @@
-package com.Text;
+package com.text.textParser;
 
 
-import com.Text.TextElements.*;
-import com.Text.TextElements.*;
+import com.text.textElements.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -25,7 +24,7 @@ public class TextParser {
 
     public static List<Word> parseIntoWords(String text){
         String words[] = text.split(" ");
-        List<Word> wordsList = new ArrayList<Word>();
+        List<Word> wordsList = new ArrayList<>();
         for(String word : words){
             Word w = new Word();
 
@@ -41,7 +40,7 @@ public class TextParser {
     }
 
     public static List<Sentence> parseIntoSentences(List<Word> words){
-        List<Sentence> sentences = new ArrayList<Sentence>();
+        List<Sentence> sentences = new ArrayList<>();
         Sentence sentence = new Sentence();
         for(Word word : words){
             //String p = word.getPunctuation().toString();

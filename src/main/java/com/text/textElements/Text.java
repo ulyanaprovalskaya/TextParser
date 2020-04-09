@@ -1,4 +1,4 @@
-package com.Text.TextElements;
+package com.text.textElements;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class Text {
     }
 
     public Text(){
-        this.sentences = new ArrayList<Sentence>();
+        this.sentences = new ArrayList<>();
     }
 
     @Override
@@ -39,4 +39,5 @@ public class Text {
         }
         return result.toString();
     }
+
 }

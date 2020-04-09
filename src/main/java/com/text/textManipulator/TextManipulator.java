@@ -1,7 +1,7 @@
-package com.Text;
+package com.text.textManipulator;
 
-import com.Text.TextElements.Sentence;
-import com.Text.TextElements.Text;
+import com.text.textElements.Sentence;
+import com.text.textElements.Text;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 

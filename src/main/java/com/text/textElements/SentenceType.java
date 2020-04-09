@@ -1,4 +1,4 @@
-package com.Text.TextElements;
+package com.text.textElements;
 
 public enum SentenceType {
     DECLARATIVE,

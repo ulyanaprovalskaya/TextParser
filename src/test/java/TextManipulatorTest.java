@@ -1,6 +1,6 @@
-import com.Text.TextElements.Text;
-import com.Text.TextManipulator;
-import com.Text.TextParser;
+import com.text.textElements.Text;
+import com.text.textManipulator.TextManipulator;
+import com.text.textParser.TextParser;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
