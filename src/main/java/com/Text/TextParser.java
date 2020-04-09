@@ -1,7 +1,8 @@
-package com.epam.Text;
+package com.Text;
 
 
-import com.epam.Text.TextElements.*;
+import com.Text.TextElements.*;
+import com.Text.TextElements.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -57,8 +58,8 @@ public class TextParser {
 
     public static SentenceType getSentenceType(Sentence sentence){
         Punctuation lastWordPunctuation = sentence.getLastWord().getPunctuation();
-        if(lastWordPunctuation.toString() == "?") return SentenceType.INTERROGATIVE;
-        if(lastWordPunctuation.toString() == "!") return SentenceType.IMPERATIVE;
+        if(lastWordPunctuation.toString().equals("?")) return SentenceType.INTERROGATIVE;
+        if(lastWordPunctuation.toString().equals("!")) return SentenceType.IMPERATIVE;
         return SentenceType.DECLARATIVE;
     }
 }

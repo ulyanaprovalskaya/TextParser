@@ -1,7 +1,7 @@
-package com.epam.Text;
+package com.Text;
 
-import com.epam.Text.TextElements.Sentence;
-import com.epam.Text.TextElements.Text;
+import com.Text.TextElements.Sentence;
+import com.Text.TextElements.Text;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 

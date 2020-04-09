@@ -1,12 +1,7 @@
-import com.epam.Text.TextElements.Sentence;
-import com.epam.Text.TextElements.Text;
-import com.epam.Text.TextManipulator;
-import com.epam.Text.TextParser;
+import com.Text.TextElements.Text;
+import com.Text.TextManipulator;
+import com.Text.TextParser;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.*;
 

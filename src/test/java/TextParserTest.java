@@ -1,10 +1,9 @@
-import com.epam.Text.TextElements.Sentence;
-import com.epam.Text.TextElements.SentenceType;
-import com.epam.Text.TextElements.Text;
-import com.epam.Text.TextElements.Word;
-import com.epam.Text.TextParser;
+import com.Text.TextElements.Sentence;
+import com.Text.TextElements.SentenceType;
+import com.Text.TextElements.Text;
+import com.Text.TextElements.Word;
+import com.Text.TextParser;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.util.List;
 

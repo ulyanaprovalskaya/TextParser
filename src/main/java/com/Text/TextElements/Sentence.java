@@ -1,4 +1,4 @@
-package com.epam.Text.TextElements;
+package com.Text.TextElements;
 
 import java.util.ArrayList;
 import java.util.List;

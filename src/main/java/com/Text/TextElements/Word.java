@@ -1,4 +1,4 @@
-package com.epam.Text.TextElements;
+package com.Text.TextElements;
 
 public class Word {
     private String word;
