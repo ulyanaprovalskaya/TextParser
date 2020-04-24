@@ -32,6 +32,17 @@ public class Sentence {
         this.words = new ArrayList<>();
     }
 
+    public Sentence(String sentence){
+        this.words = new ArrayList<>();
+
+        String words[] = sentence.split(" ");
+        for(String word : words){
+            if(!word.equals("")) this.words.add(new Word(word));
+        }
+
+        this.sentenceType = determineSentenceType(this);
+    }
+
     public void add(Word word){
         words.add(word);
     }
@@ -42,6 +53,13 @@ public class Sentence {
 
     public int getLength(){
         return words.size();
+    }
+
+    public static SentenceType determineSentenceType(Sentence sentence){
+        Punctuation lastWordPunctuation = sentence.getLastWord().getPunctuation();
+        if(lastWordPunctuation.toString().equals("?")) return SentenceType.INTERROGATIVE;
+        if(lastWordPunctuation.toString().equals("!")) return SentenceType.IMPERATIVE;
+        return SentenceType.DECLARATIVE;
     }
 
     @Override
@@ -57,7 +75,7 @@ public class Sentence {
     public String toString(){
         StringBuilder result = new StringBuilder("");
         for(Word w  : words){
-            result.append(w + " ");
+            result.append(" " + w);
         }
         return result.toString();
     }

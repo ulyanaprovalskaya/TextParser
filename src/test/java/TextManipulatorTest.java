@@ -1,6 +1,5 @@
 import com.text.textElements.Text;
 import com.text.textManipulator.TextManipulator;
-import com.text.textParser.TextParser;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -23,8 +22,8 @@ public class TextManipulatorTest {
             " arrive on time.";
     @Test
     public void sortSentencesByLength() {
-        Text actualValue = TextManipulator.sortSentencesByLength(TextParser.parse(TEXT));
-        Text expectedValue = TextParser.parse(SORTED_TEXT);
+        Text actualValue = TextManipulator.sortSentencesByLength(new Text(TEXT));
+        Text expectedValue = new Text(SORTED_TEXT);
 
         assertEquals(actualValue, expectedValue);
 

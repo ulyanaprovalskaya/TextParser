@@ -1,6 +1,8 @@
 package com.text.textElements;
 
 public class Punctuation {
+    public static String punctuation = ".,:;!?–";
+    public static String endPunctuationSign = ".?!";
 
     private char sign;
 

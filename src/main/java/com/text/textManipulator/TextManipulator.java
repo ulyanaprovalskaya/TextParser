@@ -13,8 +13,7 @@ public class TextManipulator {
 
     public static Text sortSentencesByLength(Text text){
         LOGGER.info("Sentences were sorted by length");
-        Text sortedText = new Text(text.getSentences());
-        Collections.sort(sortedText.getSentences(), Comparator.comparing(Sentence::getLength));
-        return sortedText;
+        Collections.sort(text.getSentences(), Comparator.comparing(Sentence::getLength));
+        return text;
     }
 }
